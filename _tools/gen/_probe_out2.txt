@@ -1,0 +1,66 @@
+sqlite3 lib version: 3.50.4
+[ERR] date_range M -> ValueError: Invalid frequency: M. Failed to parse with error message: ValueError("'M' is no longer sup
+[OK ] date_range ME -> 3 warns=[]
+[ERR] resample M -> ValueError: Invalid frequency: M. Failed to parse with error message: ValueError("'M' is no longer sup
+[OK ] resample MS -> (1,) warns=[]
+[OK ] resample QE -> (1,) warns=[]
+[OK ] period_range M -> 3 warns=[]
+[OK ] dt.to_period M -> ['2024-01', '2024-01'] warns=[]
+[OK ] Timestamp - Period arithmetic -> 2 warns=[]
+[OK ] date_range freq 'h' -> 3 warns=[]
+[ERR] date_range freq 'H' -> ValueError: Invalid frequency: H. Failed to parse with error message: ValueError("Invalid frequency: H
+[OK ] stack default (NaN drop?) -> (4,) warns=[]
+[OK ] stack future_stack=True -> (4,) warns=[]
+[OK ] unstack fill_value -> (2, 2) warns=[]
+[OK ] unsorted MI slice warns -> [] warns=[]
+[OK ] lexsort_depth unsorted -> 0 warns=[]
+[OK ] lexsort_depth sorted -> 2 warns=[]
+[OK ] sorted MI slice warns -> [] warns=[]
+[OK ] pd.concat copy kw -> (4, 2) warns=['Pandas4Warning']
+[OK ] Series.view -> False warns=[]
+[OK ] swapaxes -> False warns=[]
+[OK ] factorize on ndarray -> [0, 1, 0] warns=[]
+[OK ] factorize on Series -> [0, 1, 0] warns=[]
+[OK ] groupby apply include_groups kw -> k
+a    1
+dtype: int64 warns=[]
+[OK ] read_csv dtype_backend numpy_nullable -> {'a': 'Int64', 'b': 'string'} warns=[]
+[OK ] convert_dtypes numpy_nullable -> {'a': 'Int64'} warns=[]
+[OK ] errors.Pandas4Warning -> 'Pandas4Warning' warns=[]
+[OK ] assert_frame_equal check_like -> 'ok' warns=[]
+[OK ] assert_frame_equal check_dtype F -> 'ok' warns=[]
+[OK ] explode multiple cols -> (2, 2) warns=[]
+[OK ] str.split expand -> (1, 2) warns=[]
+[OK ] Sparse memory -> 60132 warns=[]
+[OK ] dense memory -> 40132 warns=[]
+[OK ] df.map -> np.int64(2) warns=[]
+[OK ] Series.case_when -> [1, 'hi'] warns=[]
+[OK ] df.query MI level -> (225, 1) warns=[]
+[ERR] at on MI -> ValueError: Invalid call for scalar access (getting)!
+[OK ] groupby(level).transform -> (2000,) warns=[]
+[OK ] crosstab margins normalize -> (3, 3) warns=[]
+[OK ] value_counts on df -> {('a',): 2, ('b',): 1} warns=[]
+[OK ] nlargest keep=all -> (2, 1) warns=[]
+[OK ] rank method first -> [1.0, 2.0, 3.0] warns=[]
+[OK ] qcut duplicates drop -> [0, 0, 0, 1] warns=[]
+[OK ] pd.cut labels -> ['lo', 'hi'] warns=[]
+[OK ] IntervalIndex as index lookup -> np.int64(10) warns=[]
+[OK ] interval get_loc -> np.int64(1) warns=[]
+[OK ] cut on new data via IntervalIndex -> ['(0, 5]', '(5, 10]'] warns=[]
+[OK ] sqlite RANK OVER -> (4, 2) warns=[]
+[OK ] sqlite ROW_NUMBER -> [1, 2, 3, 4] warns=[]
+[OK ] sqlite CTE -> [4] warns=[]
+[OK ] sqlite FULL OUTER JOIN -> (4, 6) warns=[]
+[OK ] sqlite dtypes back -> {'id': 'int64', 'dept': 'str', 'sal': 'int64'} warns=[]
+[OK ] sqlite date fn -> ['2024-01-06'] warns=[]
+[OK ] read_sql parse_dates -> {'d': 'datetime64[us]'} warns=[]
+[OK ] sqlite ROUND/COALESCE -> [{'a': 1, 'b': 1.23}] warns=[]
+[TIME] 200k groupby -> 0.030s
+[TIME] 20k apply axis=1 -> 1.558s
+[TIME] 20k itertuples -> 0.198s
+[TIME] 5k iterrows -> 0.976s
+[TIME] 200k csv roundtrip -> 7.015s
+[TIME] 100k str.upper -> 0.263s
+[TIME] 300 concat loop -> 0.505s
+PROBE2 DONE
+<sys>:0: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x00000185548CAF20>

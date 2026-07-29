@@ -1,0 +1,194 @@
+C:\Users\Quonain\MyFiles\Artificial-Intelligence\_tools\gen\_pandas_adv_probe.py:76: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment.
+Such chained assignment never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+Try using '.loc[row_indexer, col_indexer] = value' instead, to perform the assignment in a single step.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#chained-assignment
+  d[d.a>1]["a"] = 5
+C:\Users\Quonain\MyFiles\Artificial-Intelligence\_tools\gen\_pandas_adv_probe.py:83: Pandas4Warning: The 'mode.copy_on_write' option is deprecated. Copy-on-Write can no longer be disabled (it is always enabled with pandas >= 3.0), and setting the option has no impact. This option will be removed in pandas 4.0.
+  p("copy on write option", lambda: pd.get_option("mode.copy_on_write"))
+C:\Users\Quonain\MyFiles\Artificial-Intelligence\_tools\gen\_pandas_adv_probe.py:205: ChainedAssignmentError: A value is being set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+Such inplace method never works to update the original DataFrame or Series, because the intermediate object on which we are setting values always behaves as a copy (due to Copy-on-Write).
+
+For example, when doing 'df[col].update(other)', try using 'df.update({col: other})' instead, to perform the operation inplace on the original object.
+
+See the documentation for a more detailed explanation: https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html
+  p("update", lambda: (mdf2.copy().update(mdf2), "ok")[1])
+pandas 3.0.5 numpy 2.4.2 py 3.14.0
+[LIB] pyarrow MISSING
+[LIB] numexpr MISSING
+[LIB] bottleneck MISSING
+[LIB] tabulate MISSING
+[LIB] jinja2 3.1.6
+[LIB] tables MISSING
+[LIB] numba MISSING
+[LIB] sqlalchemy MISSING
+[LIB] openpyxl MISSING
+[LIB] scipy MISSING
+[OK ] str series dtype -> 'str'
+[OK ] str series dtype type -> 'StringDtype'
+[OK ] infer_string option -> 'n/a'
+[OK ] options.mode keys -> ['chained_assignment', 'copy_on_write', 'performance_warnings', 'sim_interactive', 'string_storage']
+[OK ] astype object -> 'object'
+[OK ] astype string -> 'string'
+[OK ] StringDtype default storage -> 'string'
+[ERR] string[pyarrow] -> ImportError: pyarrow>=13.0.0 is required for PyArrow backed StringArray.
+[ERR] dtype_backend pyarrow -> NameError: name 'ArrowDtype' is not defined
+[OK ] memory_usage deep on str -> 264
+[OK ] object col memory -> 53132
+[OK ] str col memory -> 53132
+[OK ] category memory -> 1185
+[OK ] stack basic -> (4,)
+[OK ] stack future_stack kw -> (4,)
+[ERR] stack dropna kw -> ValueError: dropna must be unspecified as the new implementation does not introduce rows of NA values. This argument will be removed in a future version of pandas.
+[OK ] unstack multi level list -> (8,)
+[OK ] stack level list -> 3
+[ERR] sum(level=0) -> TypeError: sum() got an unexpected keyword argument 'level'
+[OK ] groupby(level=0).sum -> (2, 1)
+[OK ] groupby(level='g').sum -> {'v': {'a': 3, 'b': 7}}
+[ERR] Int64Index -> AttributeError: module 'pandas' has no attribute 'Int64Index'
+[OK ] pd.Index int dtype -> 'int64'
+[OK ] RangeIndex -> 'RangeIndex(start=0, stop=3, step=1)'
+[OK ] CategoricalIndex -> 'category'
+[OK ] IntervalIndex.from_breaks -> "IntervalIndex([(0, 5], (5, 10]], dtype='interval[int64, right]')"
+[OK ] PeriodIndex -> "PeriodIndex(['2024-01', '2024-02'], dtype='period[M]')"
+[OK ] IntervalIndex get_indexer -> [0, 1]
+[OK ] cut retbins categories -> [Interval(0, 5, closed='right'), Interval(5, 10, closed='right')]
+[OK ] chained assignment -> (np.int64(1), ['ChainedAssignmentError'])
+[OK ] chained assign on filter -> 'no error'
+[OK ] ChainedAssignmentError exists -> 'ChainedAssignmentError'
+[ERR] SettingWithCopyWarning exists -> AttributeError: module 'pandas.errors' has no attribute 'SettingWithCopyWarning'
+[OK ] copy on write option -> True
+[OK ] cow: series view after parent write -> np.int64(1)
+[ERR] _is_view attr -> AttributeError: 'Series' object has no attribute '_is_view'
+[OK ] fillna inplace warnings -> []
+[OK ] removed methods -> (False, False, True, False)
+[OK ] Series.append -> False
+[ERR] fillna method='ffill' -> TypeError: NDFrame.fillna() got an unexpected keyword argument 'method'
+[OK ] ffill() -> [1.0, 1.0]
+[OK ] Int64 + NA -> [2, <NA>]
+[OK ] boolean NA any -> np.True_
+[OK ] Int64 mean -> np.float64(1.0)
+[OK ] NA == NA -> '<NA>'
+[ERR] Int64 astype int64 with NA -> ValueError: cannot convert NA to integer
+[OK ] convert_dtypes -> {'a': 'Int64', 'b': 'string'}
+[OK ] to_numeric downcast -> 'uint8'
+[OK ] Sparse -> 'Sparse[float64, nan]'
+[OK ] sparse density -> 1.0
+[OK ] df.eval -> 83.16064368837961
+[OK ] df.query -> (33, 3)
+[ERR] pd.eval engine numexpr -> ImportError: 'numexpr' is not installed or an unsupported version. Cannot use engine='numexpr' for query/eval if 'numexpr' is not installed
+[OK ] query local var -> (57, 3)
+[OK ] eval assign -> (100, 4)
+[OK ] groupby apply include_groups -> {'a': 3, 'b': 12}
+[OK ] groupby apply full frame -> (2, 1)
+[OK ] groupby transform -> [3, 3, 12, 12, 12]
+[OK ] groupby rank dense -> [1.0, 2.0, 1.0, 2.0, 3.0]
+[OK ] groupby cumcount -> [0, 1, 0, 1, 2]
+[OK ] groupby nth -> (2, 2)
+[OK ] groupby rolling -> (5,)
+[OK ] groupby expanding -> (5,)
+[OK ] groupby observed default -> (1, 1)
+[OK ] groupby agg named -> {'total': {'a': 3, 'b': 12}, 'n': {'a': 2, 'b': 3}}
+[OK ] groupby ngroup -> [0, 0, 1, 1, 1]
+[OK ] groupby pct_change -> [nan, 1.0, nan, 0.33, 0.25]
+[OK ] groupby head -> (2, 2)
+[OK ] groupby size vs count -> {'a': 2, 'b': 3}
+[OK ] groupby qcut per group -> [0, 1, 0, 0, 1]
+[OK ] merge validate -> (13, 3)
+[OK ] merge indicator -> {'both': 4, 'left_only': 3, 'right_only': 0}
+[OK ] merge_asof -> {'t': [1, 5], 'a': [1, 2], 'b': [9, 8]}
+[OK ] join on index -> (13, 2)
+[OK ] compare -> (1, 2)
+[OK ] read_csv dtype dict -> {'k': 'str', 'v': 'int32'}
+[ERR] read_csv engine pyarrow -> ImportError: `Import pyarrow` failed.  Use pip or conda to install the pyarrow package.
+[OK ] read_csv low_memory -> (5, 2)
+[OK ] read_csv chunksize -> 5
+[ERR] to_parquet -> ImportError: Unable to find a usable engine; tried using: 'pyarrow', 'fastparquet'.
+A suitable version of pyarrow or fastparquet is required for parquet support.
+Trying to import the above resulted in these errors:
+ - `Import pyarrow` failed. pyarrow is required for parquet support. Use pip or conda to install the pyarrow package.
+ - `Import fastparquet` failed. fastparquet is 
+[ERR] to_feather -> ImportError: `Import pyarrow` failed.  Use pip or conda to install the pyarrow package.
+[OK ] to_pickle -> (5, 2)
+[ERR] to_hdf -> ImportError: `Import pytables` failed.  Use pip or conda to install the pytables package.
+[ERR] to_markdown -> ImportError: `Import tabulate` failed.  Use pip or conda to install the tabulate package.
+[OK ] to_string -> '   k  v\n0  a  1'
+[OK ] style -> 'Styler'
+[OK ] to_sql sqlite3 -> 5
+[OK ] read_sql sqlite3 -> (5, 2)
+[OK ] read_sql chunksize -> 5
+[OK ] read_sql_query params -> (3, 2)
+[OK ] wide_to_long -> (2, 1)
+[OK ] melt -> (5, 3)
+[OK ] pivot_table margins -> {'v': {'a': 3, 'b': 12, 'All': 15}}
+[OK ] pivot -> (1, 2)
+[OK ] crosstab -> (2, 5)
+[OK ] explode -> (3, 1)
+[OK ] json_normalize -> ['a', 'b.c']
+[OK ] json_normalize record_path -> (1, 2)
+[OK ] loc tuple -> np.int64(0)
+[OK ] loc partial -> (2, 1)
+[OK ] IndexSlice -> (2, 1)
+[OK ] xs -> (2, 1)
+[OK ] loc list of tuples -> (2, 1)
+[ERR] sortlevel -> AttributeError: 'DataFrame' object has no attribute 'sortlevel'
+[OK ] index.sortlevel -> 2
+[OK ] lexsort_depth -> 2
+[OK ] is_lexsorted attr -> False
+[OK ] PerformanceWarning cls -> 'PerformanceWarning'
+[OK ] get_level_values -> ['a', 'a', 'b', 'b']
+[OK ] droplevel -> (4, 1)
+[OK ] swaplevel -> FrozenList(['l1', 'l0'])
+[OK ] reorder_levels -> FrozenList(['l1', 'l0'])
+[OK ] rename_axis -> FrozenList(['A', 'B'])
+[OK ] set_names -> FrozenList(['x', 'y'])
+[OK ] reindex fill_value -> (2, 1)
+[OK ] align -> [(4, 1), (4, 1)]
+[OK ] combine_first -> (4, 1)
+[OK ] update -> 'ok'
+[OK ] mask/where -> (4, 1)
+[OK ] memory_usage index -> 574
+[OK ] mi codes/levels -> ([0, 0, 1, 1], [['a', 'b'], [1, 2]])
+[OK ] agg axis=1 -> [3]
+[OK ] df.T with mi -> (1, 4)
+[OK ] rolling mean -> (8,)
+[OK ] rolling window '3D' -> (10,)
+[OK ] resample -> (2,)
+[OK ] resample ME -> (1,)
+[OK ] ewm -> (10,)
+[OK ] shift freq -> Timestamp('2024-01-02 00:00:00')
+[OK ] tz_localize -> Timestamp('2024-01-01 05:00:00+0500', tz='Asia/Karachi')
+[OK ] PeriodIndex asfreq -> ['2024-01-31', '2024-02-29']
+[OK ] dt.day_name -> ['Monday', 'Tuesday']
+[OK ] offsets BDay -> datetime.date(2024, 1, 8)
+[OK ] itertuples -> {'k': 'a', 'v': 1}
+[OK ] iterrows -> 0
+[OK ] np.select -> ['lo', 'lo', 'mid', 'mid', 'hi']
+[OK ] at vs loc -> np.int64(1)
+[OK ] index.is_unique -> True
+[OK ] index.is_monotonic_increasing -> True
+[OK ] nlargest -> (2, 2)
+[OK ] drop_duplicates subset keep -> (2, 2)
+[OK ] str accessor -> ['AB', 'CD']
+[OK ] str dtype .str -> 'int64'
+[OK ] assert_frame_equal -> 'ok'
+[OK ] show_versions -> 'function'
+[OK ] options display -> 60
+[OK ] infer_objects -> 'int64'
+[OK ] pd.array -> 'Int64'
+[ERR] factorize -> TypeError: factorize requires a Series, Index, ExtensionArray, np.ndarray or NumpyExtensionArray got list.
+[OK ] get_dummies dtype -> {'a': 'bool', 'b': 'bool'}
+[OK ] cat codes memory -> 'int8'
+[OK ] corr -> (3, 3)
+[OK ] rank pct -> [0.2, 0.4, 0.6, 0.8, 1.0]
+[OK ] nunique dropna -> {'k': 2, 'v': 5}
+[OK ] value_counts normalize -> {'b': 0.6, 'a': 0.4}
+[OK ] select_dtypes -> ['v']
+[OK ] pipe -> (5, 2)
+[OK ] assign multi -> (5, 4)
+[OK ] filter regex -> (5, 1)
+[OK ] empty df ops -> (0,)
+[OK ] all-NaN mean -> nan
+[OK ] df.info deep -> 'ok'
+PROBE DONE

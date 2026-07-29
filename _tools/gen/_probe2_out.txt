@@ -1,0 +1,107 @@
+--- merge details ---
+[OK]   NaN keys same dtype merge: {'k': [1.0, nan], 'v': [1, 3], 'w': [9, 8]}
+[OK]   int vs float key merge: (1, 1)
+[ERR]  int vs str merge msg: ValueError: You are trying to merge on int64 and str columns for key 'k'. If you wish to proceed you should use pd.concat
+[OK]   validate one_to_many ok: (2, 1)
+[OK]   merge suffixes: ['k', 'v_L', 'v_R']
+[OK]   merge left_index/right_on: (1, 3)
+[OK]   anti join via indicator: (1, 4)
+[OK]   merge_asof by=: {'t': [Timestamp('2024-01-01 10:00:05')], 'g': ['a'], 'v': [1], 'p': [5]}
+[OK]   merge_ordered by: (3, 4)
+[OK]   compare keep_shape: (2, 2)
+[OK]   concat axis=1 inner: (0, 2)
+[OK]   concat mismatched cols: {'a': 1, 'b': 1}
+[OK]   df.join how=outer lsuffix: (2, 2)
+[OK]   isin semi join: (2, 2)
+
+--- groupby details ---
+[OK]   sum on mixed df (str concat): {'h': ['xy', 'xy'], 'v': [3, 7], 's': ['pq', 'rt']}
+[OK]   agg dict per col: [('v', 'sum'), ('v', 'mean'), ('s', 'first')]
+[OK]   agg lambda: {'a': 1, 'b': 1}
+[OK]   agg multi-output series: {('a', 'lo'): 1, ('a', 'hi'): 2, ('b', 'lo'): 3, ('b', 'hi'): 4}
+[OK]   group_keys=False apply: [0, 2]
+[OK]   group_keys=True apply: [('a', 0), ('b', 2)]
+[OK]   nunique/first/last/prod: (2, 7)
+[OK]   groupby multiple cols unstack: (2, 2)
+[OK]   head/tail per group: ((2, 4), (2, 4))
+[OK]   nth list: (4, 4)
+[OK]   groupby nlargest: {('a', 1): 2, ('b', 3): 4}
+[OK]   transform lambda scalar: [1.5, 1.5, 3.5, 3.5]
+[OK]   transform rank: [1.0, 2.0, 1.0, 2.0]
+[OK]   expanding per group: (4,)
+[OK]   shift/diff per group: ([nan, 1.0, nan, 3.0], [nan, 1.0, nan, 1.0])
+[OK]   sort=False order: ['b', 'a']
+[OK]   agg on Series groupby by array: {0: 3, 1: 7}
+[OK]   filter dropna=False: (4, 4)
+[OK]   pivot_table observed arg: (2, 2)
+[OK]   pivot_table dropna: (2, 2)
+[OK]   pivot_table multi aggfunc: [('sum', 'v'), ('mean', 'v')]
+[OK]   crosstab values+aggfunc: (2, 2)
+[OK]   crosstab margins normalize: (3, 3)
+[OK]   MultiIndex xs: {'x': 1, 'y': 2}
+[OK]   IndexSlice: (2,)
+[OK]   reset_index name: ['g', 'total']
+[OK]   size to_frame name: ['g', 'n']
+
+--- timeseries details ---
+[ERR]  to_datetime errors=ignore: AssertionError: 
+[OK]   interpolate method=time: [1.0, 2.0, 3.0, 4.0, 5.0, 6.0]
+[OK]   rolling apply raw: [nan, 3.0, nan, nan, 9.0, 11.0]
+[OK]   rolling min_periods center: [1.5, 1.5, 3.0, 4.5, 5.0, 5.5]
+[OK]   resample agg dict: (3, 2)
+[OK]   resample ffill/bfill: (11,)
+[OK]   asfreq vs resample: ((3,), (3,))
+[OK]   reindex full range: np.int64(1)
+[OK]   dup timestamps: False
+[ERR]  unsorted partial slice err: KeyError: 'Value based partial slicing on non-monotonic DatetimeIndexes with non-existing keys is not allowed.'
+[OK]   nonexistent shift_forward: Timestamp('2024-03-10 03:00:00-0400', tz='America/New_York')
+[OK]   ambiguous: Timestamp('2024-11-03 01:30:00-0400', tz='America/New_York')
+[ERR]  tz aware minus naive: TypeError: Cannot subtract tz-naive and tz-aware datetime-like objects.
+[OK]   PeriodIndex ops: ['2024-02', '2024-03', '2024-04']
+[OK]   to_timestamp: Timestamp('2024-01-31 23:59:59.999999')
+[OK]   Timedelta components: (95400.0, 1)
+[OK]   dt.isocalendar: ['year', 'week', 'day']
+[OK]   dt.to_period: ['2024-01-01/2024-01-07', '2024-01-01/2024-01-07']
+[OK]   dt.normalize/floor/ceil/round: [Timestamp('2024-01-01 00:00:00'), Timestamp('2024-01-01 00:00:00')]
+[OK]   bdate_range: 10
+[OK]   offsets BMonthEnd: Timestamp('2024-01-31 00:00:00')
+[OK]   ewm alpha adjust=False: [1.0, 1.5, 2.25]
+[OK]   rolling cov: [nan, nan, 1.5, 2.5]
+[OK]   rolling on df multi col: (3, 2)
+[OK]   loc time slice iloc split: ((3,), (3,))
+[OK]   truncate: (3,)
+[OK]   session cumsum trick: [0, 0, 1]
+
+--- strings/categorical details ---
+[OK]   str dtype of split expand: ['str', 'str']
+[OK]   str.findall: [['1', '2']]
+[OK]   str.count/startswith: ([2], [True])
+[OK]   str.strip family: ['a', 'a', 'a']
+[OK]   str case ops: ['Ab', 'Ab', 'ab']
+[OK]   str.slice: ['bcd']
+[OK]   str.join: ['a-b']
+[OK]   str.cat two series: ['a-b']
+[OK]   str.extract expand=False: ['1']
+[OK]   str.match vs fullmatch: ([True], [False])
+[OK]   object vs str memory: (57132, 57132, 1189)
+[OK]   category merge keys: (1, 3)
+[OK]   concat same categories keeps cat: CategoricalDtype(categories=['a', 'b'], ordered=False, categories_dtype=str)
+[OK]   union_categoricals: ['a', 'b']
+[ERR]  cat new value assign: TypeError: Cannot setitem on a Categorical with a new category (zzz), set the categories first
+[OK]   sort by category order: ['lo', 'hi']
+[OK]   qcut duplicates drop: (2,)
+[OK]   cut labels=False: [0, 1]
+[OK]   cat.as_ordered/codes groupby: True
+[OK]   get_dummies dtype=int prefix: ['c_a', 'c_b']
+[OK]   json_normalize meta sep record: {'p': ['x'], 'id': [1]}
+[OK]   pipe: ['a', 'b']
+[OK]   query backtick @var: (1, 1)
+[OK]   assign chain method chaining: 1
+[OK]   duplicated subset: [True, True]
+[OK]   np.where flag: ['lo', 'hi']
+[OK]   mask/where: [0, 5]
+[OK]   clip: [1, 10]
+[OK]   MultiIndex from_product loc: np.int64(1)
+[OK]   stack level name: 2
+[OK]   unstack fill_value: (1, 1)
+[OK]   swaplevel sort: [(1, 'a'), (2, 'b')]

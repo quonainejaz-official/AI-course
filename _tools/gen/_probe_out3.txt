@@ -1,0 +1,46 @@
+[OK ] dense mem -> 160132 warns=[]
+[OK ] Sparse[float] nan fill mem -> 240132 warns=[]
+[OK ] SparseDtype fill 0 mem -> 2532 warns=[]
+[OK ] sparse density fill0 -> 0.01 warns=[]
+[OK ] sparse -> dense -> np.float64(200.0) warns=[]
+[OK ] sparse sum works -> 200.0 warns=[]
+[OK ] date_range dtype -> 'datetime64[us]' warns=[]
+[OK ] to_datetime dtype -> 'datetime64[us]' warns=[]
+[OK ] to_datetime format -> '2024-01-05' warns=[]
+[OK ] timedelta dtype -> 'timedelta64[us]' warns=[]
+[OK ] datetime mem 2 rows -> 16000 warns=[]
+[OK ] astype datetime64[s] -> 'datetime64[s]' warns=[]
+[ERR] tz nonexistent -> ValueError: 2024-03-10 02:30:00 is a nonexistent time due to daylight savings time. Try using the 'non
+[OK ] tz ambiguous -> Timestamp('2024-11-03 01:30:00-0400', tz='America/New_York') warns=[]
+[ERR] tz aware compare naive -> TypeError: Cannot compare tz-naive and tz-aware timestamps
+[OK ] NaT propagate -> 'nan' warns=[]
+[OK ] df mem deep MB -> np.float64(3.65) warns=[]
+[OK ] opt mem deep MB -> np.float64(0.5) warns=[]
+[OK ] per-col mem -> {'Index': 132, 'id': 400000, 'city': 2800029, 'amt': 400000, 'flag': 50000} warns=[]
+[OK ] opt per-col mem -> {'Index': 132, 'id': 200000, 'city': 50224, 'amt': 200000, 'flag': 50000} warns=[]
+[OK ] id downcast dtype -> 'uint32' warns=[]
+[OK ] merge str keys -> (2, 3) warns=[]
+[OK ] merge cat keys -> {'k': 'category', 'x': 'int64', 'y': 'int64'} warns=[]
+[ERR] merge int vs str key -> ValueError: You are trying to merge on int64 and str columns for key 'k'. If you wish to proceed you s
+[OK ] merge int64 vs Int64 -> (1, 1) warns=[]
+[OK ] merge many-to-many size -> (6, 1) warns=[]
+[ERR] merge validate 1:1 error -> MergeError: Merge keys are not unique in left dataset; not a one-to-one merge
+Duplicates in left:
+  k
+
+[TIME] cython sum 0.0110s vs lambda 0.0998s ratio 9.1x
+[TIME] vec 0.00256s vs map 0.09444s ratio 37x
+[OK ] tracemalloc cur=0.80MB peak=1.60MB
+[OK ] NormalDist cdf -> 0.975 warns=[]
+[OK ] statistics fmean -> 2.0 warns=[]
+[OK ] custom md table -> '| k | x | ~ |---|---| ~ | a | 1 | ~ | b | 2 |' warns=[]
+[ERR] to_markdown try -> ImportError: `Import tabulate` failed.  Use pip or conda to install the tabulate package.
+[OK ] sql vs pandas frame equal -> 'ok' warns=[]
+[OK ] sql dtypes -> {'dept': 'str', 'top': 'int64'} warns=[]
+[OK ] pd dtypes -> {'dept': 'str', 'top': 'int64'} warns=[]
+[OK ] monotonic -> True warns=[]
+[OK ] get_loc -> 150000 warns=[]
+[OK ] get_indexer -> [1, 2] warns=[]
+[OK ] show_versions lines -> 'skip' warns=[]
+[OK ] gc collect -> True warns=[]
+PROBE3 DONE
