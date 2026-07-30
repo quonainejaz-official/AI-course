@@ -1754,7 +1754,7 @@ np.set_printoptions(precision=8, suppress=False)   # reset
 - **NB 04** — 30+ Practice Problems + Interview prep
 """))
 
-save(r"Numpy/Basics/01_Numpy_Introduction_Arrays_aur_Creation.ipynb", CELLS)
+save(r"Numpy/Basics/01_Numpy_Introduction_Arrays_and_Creation.ipynb", CELLS)
 
 
 

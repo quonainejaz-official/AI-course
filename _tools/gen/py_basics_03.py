@@ -450,4 +450,4 @@ print("  ", "".join(reversed(s)))
 
 # CHUNK_MARKER
 
-save(r"Python/Basics/03_Strings_aur_String_Methods.ipynb", cells)
+save(r"Python/Basics/03_Strings_and_String_Methods.ipynb", cells)

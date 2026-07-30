@@ -4670,6 +4670,6 @@ def f(pos, /, normal, *args, kw_only, **kwargs)                    # full signat
 # ==MARKER==
 
 save(
-    r"Python/Intermediate/06_Comprehension_Patterns_Idioms_aur_Interview_Problems.ipynb",
+    r"Python/Intermediate/06_Comprehension_Patterns_Idioms_and_Interview_Problems.ipynb",
     CELLS,
 )

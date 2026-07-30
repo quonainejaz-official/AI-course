@@ -1845,4 +1845,4 @@ Boilerplate wrappers zyada?             -> __getattr__ delegation (dunders manua
 """),
 ]
 
-save(r"OOP in Python/Intermediate/02_MRO_Multiple_Inheritance_Mixins_aur_super_Deep.ipynb", CELLS)
+save(r"OOP in Python/Intermediate/02_MRO_Multiple_Inheritance_Mixins_and_super_Deep.ipynb", CELLS)

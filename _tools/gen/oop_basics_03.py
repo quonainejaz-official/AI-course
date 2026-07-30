@@ -2598,7 +2598,7 @@ cells.append(md(r"""
 classes (`abc`), classmethod factories, aur LeetCode design problems (Min Stack waghera).
 """))
 
-save(r"OOP in Python/Basics/03_Inheritance_Polymorphism_aur_Method_Overriding.ipynb", cells)
+save(r"OOP in Python/Basics/03_Inheritance_Polymorphism_and_Method_Overriding.ipynb", cells)
 
 
 

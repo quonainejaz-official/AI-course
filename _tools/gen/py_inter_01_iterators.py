@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, r"c:\Users\Quonain\MyFiles\Artificial-Intelligence\_tools")
 from nbgen import md, code, save  # noqa: E402
 
-PATH = r"Python/Intermediate/01_Iterators_Generators_aur_Itertools.ipynb"
+PATH = r"Python/Intermediate/01_Iterators_Generators_and_Itertools.ipynb"
 
 cells = []
 

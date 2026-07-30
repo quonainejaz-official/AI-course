@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, r"c:\Users\Quonain\MyFiles\Artificial-Intelligence\_tools")
 from nbgen import md, code, save  # noqa: E402
 
-PATH = r"Python/Intermediate/02_Closures_Decorators_aur_Functional_Python.ipynb"
+PATH = r"Python/Intermediate/02_Closures_Decorators_and_Functional_Python.ipynb"
 
 cells = []
 

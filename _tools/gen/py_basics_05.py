@@ -1617,4 +1617,4 @@ than list.
 and concatenation tricks (LC 1480, 1929).
 """))
 
-save(r"Python/Basics/05_Lists_aur_Tuples.ipynb", cells)
+save(r"Python/Basics/05_Lists_and_Tuples.ipynb", cells)

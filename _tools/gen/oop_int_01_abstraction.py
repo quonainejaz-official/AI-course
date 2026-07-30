@@ -2099,4 +2099,4 @@ diamond problem, cooperative `super()`, aur mixins ka poora design.
 """),
 ]
 
-save(r"OOP in Python/Intermediate/01_Abstraction_ABC_Interfaces_aur_Protocols.ipynb", CELLS)
+save(r"OOP in Python/Intermediate/01_Abstraction_ABC_Interfaces_and_Protocols.ipynb", CELLS)

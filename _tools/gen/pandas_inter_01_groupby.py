@@ -487,4 +487,4 @@ print(r[["region", "order_date", "amount", "rank_in_region",
 ]
 # <<APPEND>>
 
-save(r"Pandas/Intermediate/01_Grouping_Aggregation_aur_Pivot_Tables.ipynb", CELLS)
+save(r"Pandas/Intermediate/01_Grouping_Aggregation_and_Pivot_Tables.ipynb", CELLS)

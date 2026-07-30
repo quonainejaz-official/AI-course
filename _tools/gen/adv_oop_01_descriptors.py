@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, r"c:\Users\Quonain\MyFiles\Artificial-Intelligence\_tools")
 from nbgen import md, code, save  # noqa: E402
 
-PATH = r"OOP in Python/Advance/01_Attribute_Access_Descriptors_aur_Properties_Deep.ipynb"
+PATH = r"OOP in Python/Advance/01_Attribute_Access_Descriptors_and_Properties_Deep.ipynb"
 
 cells = []
 

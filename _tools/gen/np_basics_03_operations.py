@@ -1386,5 +1386,5 @@ Mubarak ho — is notebook ke baad aap NumPy ke operations, broadcasting aur agg
 confident hain. Agla step: linear algebra / advanced indexing / performance tricks!
 """))
 
-save(r"Numpy/Basics/03_Operations_Broadcasting_aur_Aggregations.ipynb", CELLS)
+save(r"Numpy/Basics/03_Operations_Broadcasting_and_Aggregations.ipynb", CELLS)
 print(f"Total cells: {len(CELLS)}")

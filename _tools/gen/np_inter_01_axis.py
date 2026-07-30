@@ -2267,4 +2267,4 @@ with np.errstate(divide='ignore'): ...             # warnings control
 `default_rng`, Monte Carlo aur statistics.
 """)
 
-save(r"Numpy/Intermediate/01_Axis_Mastery_Aggregations_aur_Advanced_Indexing.ipynb", CELLS)
+save(r"Numpy/Intermediate/01_Axis_Mastery_Aggregations_and_Advanced_Indexing.ipynb", CELLS)

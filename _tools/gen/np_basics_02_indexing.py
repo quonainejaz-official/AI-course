@@ -1346,4 +1346,4 @@ cells.append(md("""
   `np.array()` banao.
 """))
 
-save(r"Numpy/Basics/02_Indexing_Slicing_Reshaping_aur_Joining.ipynb", cells)
+save(r"Numpy/Basics/02_Indexing_Slicing_Reshaping_and_Joining.ipynb", cells)

@@ -2748,4 +2748,4 @@ unicode/encode-decode, aur `+` vs `join` ki performance.
 
 # CHUNK_MARKER
 
-save(r"Python/Basics/02_Variables_DataTypes_aur_Operators.ipynb", cells)
+save(r"Python/Basics/02_Variables_DataTypes_and_Operators.ipynb", cells)

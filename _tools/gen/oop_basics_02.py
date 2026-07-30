@@ -1314,4 +1314,4 @@ cells.append(md(r"""
 **Aage kya:** Agla notebook — Inheritance aur Polymorphism.
 """))
 
-save(r"OOP in Python/Basics/02_Encapsulation_Access_Modifiers_aur_Properties.ipynb", cells)
+save(r"OOP in Python/Basics/02_Encapsulation_Access_Modifiers_and_Properties.ipynb", cells)

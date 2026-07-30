@@ -1567,4 +1567,4 @@ Agle notebook me hum **Encapsulation** deep dive karenge: `_protected`, `__priva
 (name mangling), `@property`, getters/setters ka Pythonic tareeqa.
 """))
 
-save(r"OOP in Python/Basics/01_OOP_Introduction_Classes_aur_Objects.ipynb", cells)
+save(r"OOP in Python/Basics/01_OOP_Introduction_Classes_and_Objects.ipynb", cells)

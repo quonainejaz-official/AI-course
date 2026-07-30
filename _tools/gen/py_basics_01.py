@@ -8,41 +8,41 @@ cells = []
 # 1. TITLE + ROADMAP + PREREQUISITES
 # ============================================================
 cells.append(md("""
-# 01 — Python Introduction aur Setup
+# 01 — Python Introduction and Setup
 
-**Level:** Beginner (Zero se shuru)
+**Level:** Beginner (Starting from zero)
 **Series:** Python Basics
 
-## Is notebook me kya seekhenge (roadmap)
+## What will you learn in this notebook (roadmap)
 
-1. Python kya hai, kyun bana, aur aaj kahan use hota hai
-2. Interpreter vs Compiler — Python "andar se" actually kya karta hai (bytecode, `.pyc`, `__pycache__`)
+1. What is Python, why was it created, and where is it used today
+2. Interpreter vs Compiler — what Python actually does internally (bytecode, `.pyc`, `__pycache__`)
 3. CPython vs PyPy vs Jython vs IronPython vs MicroPython
-4. `.py` script vs `.ipynb` notebook — kab kaunsa use karein
-5. Jupyter cell types aur zaroori keyboard shortcuts
-6. `print()` function ke saare parameters (`sep`, `end`, `file`, `flush`)
+4. `.py` script vs `.ipynb` notebook — when to use which
+5. Jupyter cell types and important keyboard shortcuts
+6. `print()` function and all its parameters (`sep`, `end`, `file`, `flush`)
 7. Comments vs Docstrings
-8. Indentation rules aur `IndentationError`
+8. Indentation rules and `IndentationError`
 9. PEP 8 essentials (naming, line length, imports, blank lines)
-10. Keywords aur identifiers ke rules
+10. Keywords and identifier rules
 11. Dynamic typing
-12. `type()` aur `id()` — object identity
-13. `help()` aur `dir()`
-14. pip basics (install/uninstall/venv/requirements.txt) — concept level
-15. Python 2 vs Python 3 ke farq
+12. `type()` and `id()` — object identity
+13. `help()` and `dir()`
+14. pip basics (install/uninstall/venv/requirements.txt) — conceptual level
+15. Python 2 vs Python 3 differences
 
-Phir: **Common Mistakes**, **Real-World Problems**, **LeetCode (Easy x2)**,
-**Interview Q&A**, **Practice Exercises**, aur ek **Cheat-sheet**.
+Then: **Common Mistakes**, **Real-World Problems**, **LeetCode (Easy x2)**,
+**Interview Q&A**, **Practice Exercises**, and a **Cheat-sheet**.
 
 ## Prerequisites
 
-- Koi bhi programming background nahi chahiye — bilkul zero se shuru.
-- Computer par Python 3.x installed hona chahiye (yeh notebook Python 3.14 target karta hai;
-  `match/case` jaisi modern features available hain).
-- Jupyter (VS Code ya JupyterLab) chal raha ho taake cells run kar sako.
+- No programming background required — starting from zero is fine.
+- Python 3.x should be installed on your computer (this notebook targets Python 3.14;
+  modern features like `match/case` are available).
+- Jupyter (VS Code or JupyterLab) should be running so you can execute cells.
 
-> **Golden rule:** Yeh notebook top-se-bottom chalao (ek hi order me). Har cell pichle cell par
-> depend kar sakta hai (variables, imports waghera), bilkul jaise ek real script me hota hai.
+> **Golden rule:** Run this notebook from top to bottom (in order). Each cell may depend on
+> previous cells (variables, imports, etc.), just like in a real script.
 """))
 
 # ============================================================
@@ -1380,4 +1380,4 @@ cells.append(md("""
 **Agla kadam:** Notebook 02 me variables, data types, aur operators deep-dive honge.
 """))
 
-save(r"Python/Basics/01_Python_Introduction_aur_Setup.ipynb", cells)
+save(r"Python/Basics/01_Python_Introduction_and_Setup.ipynb", cells)

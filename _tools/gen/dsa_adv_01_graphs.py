@@ -3827,4 +3827,4 @@ print("LC 785 pass — disconnected components ka loop bhoolna #1 bug hai")
 
 # @@APPEND@@
 
-save(r"DSA in Python/Advance/01_Graphs_Traversals_ShortestPaths_aur_MST.ipynb", cells)
+save(r"DSA in Python/Advance/01_Graphs_Traversals_ShortestPaths_and_MST.ipynb", cells)
