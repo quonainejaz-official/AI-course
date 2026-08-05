@@ -1,5 +1,8 @@
-# Videos (large media, not tracked)
-videos/
+# Large media and datasets (not tracked)
+/PICs/
+/PDFs/
+/Images_Dataset/
+/Videos/
 
 # Python
 __pycache__/
@@ -16,5 +19,8 @@ env/
 Thumbs.db
 desktop.ini
 .DS_Store
-.vscode/
 .idea/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
